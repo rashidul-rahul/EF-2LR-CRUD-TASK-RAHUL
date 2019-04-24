@@ -12,5 +12,9 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/allBlog', 'BlogController@index');
-Route::get('create', 'BlogController@index');
+Route::get('allBlog', 'BlogController@index')->name('blog');
+Route::get('create', 'BlogController@create')->name('create');
+Route::post('create', 'BlogController@store')->name('store');
+Route::get('edit/{id}', 'BlogController@edit')->name('edit');
+Route::post('update/{id}', 'BlogController@update')->name('update');
+Route::get('delete/{id}', 'BlogController@update')->name('delete');

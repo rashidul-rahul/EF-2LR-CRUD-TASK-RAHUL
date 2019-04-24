@@ -10,7 +10,7 @@
                 <a class="nav-link" href="{{ url('/') }}">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/allBlog">All Blog</a>
+                <a class="nav-link" href="allBlog">All Blog</a>
             </li><li class="nav-item">
                 <a class="nav-link" href="create">Create Blog</a>
             </li>
