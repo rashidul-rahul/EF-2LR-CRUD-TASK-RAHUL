@@ -8,8 +8,10 @@ use Illuminate\Http\Request;
 class BlogController extends Controller
 {
     public function index(){
-        $blogs = blog::all();
+        $blogs = blog::paginate(5);
         return view('allBlog', compact('blogs'));
+    }public function admin(){
+        return view('admin');
     }
 
     public function create(){
@@ -42,5 +44,10 @@ class BlogController extends Controller
         $blog->description = $request->description;
         $blog->save();
         return redirect(route('blog'))->with('successMsg', 'Blog Update successfully');
+    }
+
+    public function delete($id){
+        blog::find($id)->delete();
+        return redirect(route('blog'))->with('successMsg', 'Blog delete successfully');
     }
 }

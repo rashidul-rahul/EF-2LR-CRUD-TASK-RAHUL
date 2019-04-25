@@ -1,5 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
-<h2 class="text-center">Welcome to admin panel</h2>
+<h2 class="text-center">main</h2>
 @endsection
