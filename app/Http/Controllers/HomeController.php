@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\blog;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(){
-        return view('welcome');
+        $blogs = blog::orderBy('created_at')->paginate(5);
+        return view('welcome', compact('blogs'));
     }
 }
