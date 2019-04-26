@@ -16,6 +16,7 @@
             </div>
             <hr>
         @endforeach
+            {{ $blogs->links() }}
     </div>
 </section>
 @endsection
